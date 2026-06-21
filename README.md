@@ -27,6 +27,30 @@ This repository currently contains **Day 1**, where we set up a simple 2D scene,
 - Simple `Player_Idle` animation
 - `Player` prefab saved in `Assets/Prefabs`
 
+## Learning Branches
+
+Each completed tutorial day is saved as its own Git branch so students can jump to that day's exact project state.
+
+Current branches:
+
+- `main` - latest stable tutorial state
+- `day-1` - Day 1 player setup, idle animation, prefab, and movement
+
+To get a specific day:
+
+```bash
+git fetch --all
+git checkout day-1
+```
+
+Future days will follow the same pattern:
+
+```text
+day-2
+day-3
+day-4
+```
+
 ## How to Open the Project
 
 1. Clone or download this repository.
