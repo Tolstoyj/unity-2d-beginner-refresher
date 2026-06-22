@@ -46,9 +46,8 @@ public class PlayerMovement2D : MonoBehaviour
         if (keyboard.spaceKey.wasPressedThisFrame)
             jumpRequested = true;
 
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
-
         UpdateFacingDirection();
+        UpdateAnimator();
     }
 
     private void FixedUpdate()
@@ -67,6 +66,13 @@ public class PlayerMovement2D : MonoBehaviour
         }
 
         jumpRequested = false;
+    }
+
+    private void UpdateAnimator()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetFloat("VerticalVelocity", rb.linearVelocity.y);
+        animator.SetBool("IsGrounded", isGrounded);
     }
 
     private void UpdateFacingDirection()
